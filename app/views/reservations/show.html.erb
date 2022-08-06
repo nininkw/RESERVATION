@@ -1,0 +1,21 @@
+<div class="box">
+  <div class="row">
+    <p><%= f.label "予約した部屋" %></p>
+    <%= @room_post.room_name %>
+  </div>
+
+  <div class="row">
+    <p><%= f.label "チェックイン" %></p>
+    <%= @reservation.check_in %>
+  </div>
+
+  <div class="row">
+    <p><%= f.label "チェックアウト" %></p>
+    <%= @reservation.check_out %>
+  </div>
+
+  <div class="row">
+    <p><%= f.label "価格" %></p>
+    <%= @total_fee 円 %>
+  </div>
+</div>
