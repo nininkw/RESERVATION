@@ -1,21 +1,22 @@
-<div class="box">
-  <div class="row">
-    <p><%= f.label "予約した部屋" %></p>
-    <%= @room_post.room_name %>
-  </div>
-
-  <div class="row">
-    <p><%= f.label "チェックイン" %></p>
-    <%= @reservation.check_in %>
-  </div>
-
-  <div class="row">
-    <p><%= f.label "チェックアウト" %></p>
-    <%= @reservation.check_out %>
-  </div>
-
-  <div class="row">
-    <p><%= f.label "価格" %></p>
-    <%= @total_fee 円 %>
+<div class="complete">
+  <div class="complete-container">
+    <table>
+      <tr>
+        <td class="d-name">予約した部屋</td>
+        <td><%= @room_post.room_name %></td>
+      </tr>
+      <tr>
+        <td class="d-name">チェックイン</td>
+        <td><%= @reservation.check_in %></td>
+      </tr>
+      <tr>
+        <td class="d-name">チェックアウト</td>
+        <td><%= @reservation.check_out %></td>
+      </tr>
+      <tr>
+        <td class="d-name">価格</td>
+        <td><%= @reservation.total_fee %> 円</td>
+      </tr>
+    </table>
   </div>
 </div>

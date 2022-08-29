@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+.room_box {
+  margin: 15px;
+}
+
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  width: 100%;
+  
+}
+
+.box_contents {
+  margin: 15px;
+  width: 25%;
+  border: 1px solid #e2e2e2;
+}
+
+.link {
+  display: block;
+  padding: 0px;
+}
+
+.room_img {
+  margin:10px;
+}
+
+.room_img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room_name{
+  margin: 10px;
+  width: 100%;
+  color: #909090;
+  font-size: 16px ;
+  font-weight: bold;
+}
+
+.room_address{
+  margin: 10px;
+  width: 100%;
+}
+
+.room_fee{
+  margin: 10px;
+  text-align: right;
+}

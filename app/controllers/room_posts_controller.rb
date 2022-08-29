@@ -1,4 +1,5 @@
 class RoomPostsController < ApplicationController
+
   def index
     @room_posts = RoomPost.all
   
@@ -6,22 +7,22 @@ class RoomPostsController < ApplicationController
   
   def new
     @room_post = RoomPost.new
-    
   end
 
   def create
     @room_post = RoomPost.new(room_post_params)
-      if @room_post.save 
+      if @room_post.save
       flash[:notice] = "ルームを登録しました！"
       redirect_to home_top_path
     else
-      render.new
+      render :new
     end 
   end   
 
   def show
     @room_post = RoomPost.find(params[:id])
     @user = @room_post.user
+    @reservation = Reservation.new
   end
 
   private

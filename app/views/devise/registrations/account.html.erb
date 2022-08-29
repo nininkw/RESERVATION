@@ -1,0 +1,18 @@
+<div class="box">
+  <div class="box-container">
+    <div class="account-wrapper">
+      <h3>アカウント</h3>
+      <div class="info address">
+        <p>メールアドレス</p>
+        <p><%= @user.email %></p>
+      </div>
+      <div class="info pass">
+        <p>パスワード</p>
+        <p><%= @user.encrypted_password %></p>
+      </div>
+      <div class="btn>
+        <%= link_to "編集", edit_user_registrarion_path %>
+      </div>
+    </div>
+  </div>
+</div>

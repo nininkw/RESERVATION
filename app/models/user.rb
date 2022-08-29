@@ -10,9 +10,11 @@ class User < ApplicationRecord
 
   validates :username, presence: true, length: { maximum: 20 }
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
-  validates :password, presence: true, length: { minimum: 7 }, format: { with: VALID_PASSWORD_REGEX }
+  validates :password, presence: true, length: { minimum: 7 }, format: { with: VALID_PASSWORD_REGEX }, on: :create
 
-  has_many :room_posts
-  has_many :reservations
+  has_many :room_posts, foreign_key: "user_id"
+  has_many :reservations, foreign_key: "user_id"
+ 
+  mount_uploader :icon, IconUploader
 
 end
