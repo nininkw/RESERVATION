@@ -1,0 +1,23 @@
+<h4><%= "検索結果 : #{@numbers} 件" %></h4>
+<div class="room_box">
+  <div class="box_container">
+    <% @results.each do |result| %>
+      <div class="box_contents">
+        <%= link_to room_post_path(result.id) do %>
+          <div class="room_img">
+              <%= image_tag result.room_img.url %>
+          </div>
+          <div class="room_name">
+            <%= result.room_name %>
+          </div>
+          <div class="room_address">
+            <%= result.room_address %>
+          </div>
+          <div class="room_fee">
+            ¥<%= result.room_fee %>
+          </div>
+        <% end %>
+      </div> 
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+// Place all the styles related to the reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.confirm {
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    width: 50%;
+    height: 35px;
+    background-color: #4C90E2;
+    border: 0.5px solid blue;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 7px;
+    text-align: center;
+  }
+  
+  .back-link {
+    margin: 10px auto;
+    width: 50%;
+    height: 35px;
+    background-color: #596267;
+    border: 0.5px solid #09222b;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 7px;
+    text-align: center;
+    line-height: 35px;
+    display: inline-block;
+  }
+}
+
+.complete {
+  background-color: #F5F8F9;
+  margin: 0 auto;
+
+  .complete-container {
+    margin: 0 auto;
+    padding: 10px 30px;
+  }
+
+  table {
+    width: 70%;
+    margin:0 auto; 
+    background-color: white;
+    border: 1px solid #EEEEEE ;
+  }
+
+  .tr {
+    height: 66px;
+    border-bottom: 1px solid #EEEEEE ;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .d-name {
+    font-weight: bold;
+  }
+}

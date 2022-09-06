@@ -1,0 +1,41 @@
+<div class="setting">
+  <div class="nav">
+    <h3 id="link-account"><%= link_to "アカウント", user_path(id: current_user.id) %></h3>
+    <h3 id="link-profile"><%= link_to "プロフィール", edit_user_path(id: current_user.id) %></h3>
+  </div>
+  <div class="profile">
+    <div class="profile-container">
+      <%= form_with model: @user, url: user_path, local: true do |f| %>
+          <h3>プロフィール</h3>
+          <div class="field-wrapper">
+            <div class="field img">
+            <% if @user.icon? %>
+              <%= image_tag @user.icon.url, class: "icon_img" %>
+            <% else %>
+              <%= image_tag "/assets/images/icon_defo.jpeg" %>
+            <% end %>
+            </div>
+
+            <div class="field icon">
+              <%= f.label " アイコン画像" %>
+              <%= f.file_field :icon, value: current_user.icon, required: true %>
+            </div>
+
+            <div class="field username">
+              <%= f.label :username, "名前" %>
+              <%= f.text_field :username, value: current_user.username, required: true %>
+            </div>
+
+            <div class="field introduction">
+              <%= f.label " 自己紹介" %>
+              <%= f.text_area :introduction, value: current_user.introduction, required: true, placeholder: "自己紹介を入力" %>
+            </div>
+
+            <div class="btn">
+              <%= f.submit "更新" %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

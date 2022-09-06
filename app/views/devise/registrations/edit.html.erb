@@ -1,0 +1,40 @@
+<div class="edit-account">
+  <div class="edit-container">
+    <h2>アカウント編集</h2>
+    <%= form_with model:@user, url: edit_user_registration_path, local: true do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password, "変更後パスワード(変更する場合のみ入力)" %> <br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "パスワード確認用(変更する場合のみ入力)" %> <br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password %> <br />
+        <%= f.password_field :current_password, autocomplete: "current-password" ,placeholder: "現在のパスワードを入力"%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "更新" %>
+      </div>
+    <% end %>
+
+    <div class="back-btn">
+      <%= link_to "戻る", :back, class: "link-back" %>
+    </div>
+  </div>
+</div>

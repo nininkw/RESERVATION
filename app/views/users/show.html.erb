@@ -1,0 +1,24 @@
+<div class="setting">
+  <div class="nav">
+    <h3 id="link-account"><%= link_to "アカウント", user_path(id: current_user.id) %></h3>
+    <h3 id="link-profile"><%= link_to "プロフィール", edit_user_path(id: current_user.id) %></h3>
+  </div>
+  <div class="account">
+    <div class="account-container">
+      <h3>アカウント</h3>
+      <div class="account-contents">
+        <div class="account-info">
+          <p class="title">メールアドレス</p>
+          <p><%= @user.email %></p>
+        </div>
+        <div class="account-info">
+          <p class="title">パスワード　　</p>
+          <p>**********</p>
+        </div>
+      </div>
+      <div class="edit-btn">
+        <%= link_to "編集", edit_user_registration_path(id: current_user.id), class: "edit-link" %>
+      </div>
+    </div>
+  </div>  
+</div>  

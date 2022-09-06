@@ -1,0 +1,45 @@
+
+<div class="confirm"> 
+  <h3>予約内容確認</h3>
+  <h3>¥ <%= @room_post.room_fee %> /日</h3>
+  <table>
+    <tr>
+      <th>チェックイン</th>
+      <td><%= @reservation.check_in %></td>
+    </tr>
+    <tr>
+      <th>チェックアウト</th>
+      <td><%= @reservation.check_out %></td>
+    </tr>
+    <tr>
+      <th>使用日数</th>
+      <td><%= @days %> 日</td>
+    </tr>
+    <tr>
+      <th>人数</th>
+      <td><%= @reservation.people %> 人</td>
+    </tr>
+    <tr>
+      <th>合計金額</th>
+      <td><%= @total_fee %> 円</td>
+    </tr>
+  </table>
+  <p>上記の内容でよろしければ「予約確定」を押してください</p>
+
+  <div class="submit">
+    <%= form_with model: @reservation, url: {controller: 'reservations', action: 'create' }, local: true do |f| %>
+      <%= f.hidden_field :room_id, value:@room_post.id %>
+      <%= f.hidden_field :check_in, value:@reservation.check_in %>
+      <%= f.hidden_field :check_out, value:@reservation.check_out %>
+      <%= f.hidden_field :people, value:@reservation.people %>
+      <%= f.hidden_field :total_fee, value:@total_fee %>
+      <%= f.hidden_field :days, value:@days %>
+      <div class="btn">
+        <%= f.submit "予約を確定" %>
+        <%= link_to "ルーム詳細に戻る", "room_posts/show", class: "back-link" %>
+      </div>
+    <% end %>
+</div>
+
+
+

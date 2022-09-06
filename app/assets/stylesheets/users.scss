@@ -1,0 +1,111 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  text-decoration: none;
+}
+
+.box-container{
+  margin: 0 auto;
+  width: 45%;
+}
+
+h3 {
+  margin: 0 15px;
+  padding: 20px;
+}
+
+.nav {
+  width:20%;
+  border-right: 1px solid #C0C0C0;
+  text-align: center;
+}
+
+.field  {
+  margin: 0 15px;
+  padding-bottom: 10px;
+}
+
+.btn {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type="text"],[type="email"],[type="password"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: #EEEEEE solid 2px ;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 35px;
+  background-color: #4C90E2;
+  border: 0.5px solid blue;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.link {
+  padding: 20px;
+  justify-content: center;
+  color: #4C90E2;
+  text-align: center;
+}
+.nav {
+  width:20%;
+  border-right: 1px solid #C0C0C0;
+  text-align: center;
+
+  h3 {
+    font-weight: lighter;
+    padding: 20px 10px;
+    :hover {
+      color: #4C90E2;
+    }
+  }
+
+  .account-link h3 {
+    color: #4C90E2;
+  }
+
+  .profile-link h3{
+    color: black;
+  }
+}
+
+.edit-account {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.edit-container {
+  width: 100%;
+  margin: 0 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.actions {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.back-btn {
+  margin: 10px auto;
+  width: 70%;
+  height: 35px;
+  border: 2px solid #C0C0C0;
+  border-radius: 5px;
+}
+
+.link-back {
+  display: block;
+  line-height: 35px;
+  color: #4C90E2;
+}

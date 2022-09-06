@@ -1,0 +1,82 @@
+.setting {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.nav {
+  width:20%;
+  border-right: 1px solid #C0C0C0;
+  text-align: center;
+}
+
+#link-account  {
+  color: #4C90E2;
+  font-weight: lighter;
+  padding: 20px 10px;
+  font-weight: lighter;
+  border-right: 3px solid #4C90E2;
+}
+
+#link-profile {
+  color: black;
+  font-weight: lighter;
+  padding: 20px 10px; 
+  border: none;
+  :hover {
+    color: #4C90E2;
+  }
+}
+
+.account {
+  margin: 0 auto;
+  width: 45%;
+}
+
+.account-container {
+  width: 100%;
+}
+
+
+h3 {
+  margin: 0 15px;
+  padding: 20px;
+}
+
+.account-info {
+  margin: 20px;
+  width: 100%;
+  border-bottom: 1px solid #C0C0C0;
+  display: flex;
+}
+
+.content p {
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  margin-right: 10px; 
+  font-weight: bold;
+}
+
+.edit-btn {
+  width: 50%;
+  height: 35px;
+  margin: 0 auto;
+  background-color: #4C90E2;
+  border: 0.5px solid blue;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.edit-link {
+  margin: 0 auto;
+  color: white;
+  line-height: 35px;
+  width: 100%;
+  height: 35px;
+  display: block;
+}
