@@ -15,8 +15,9 @@ class ReservationsController < ApplicationController
     @room_post = RoomPost.find(@reservation.room_id) 
     if @reservation.save
       flash[:notice] = "予約を確定しました"
-      redirect_to reservation_path(@reservation.id  )
-  
+      redirect_to reservation_path(@reservation.id)
+    else
+      render template: "room_posts/show"
     end
   end
 

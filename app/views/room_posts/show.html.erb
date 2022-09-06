@@ -1,38 +1,38 @@
-
-  <div class="reservation-container">
-    <div class="room_detail">
-      <p><%= image_tag @room_post.room_img.url %></p>
-      <p><%= @room_post.room_name %></p>
-      <p><%= @room_post.room_address %></p>
-      <p><%= @room_post.room_introduction %></p>
-    </div>
-    <div class="form_area">
-      <div class="fee">
-        <p>¥ <%= @room_post.room_fee %> /日<p>  
-      </div>
-      <%= form_with model:@reservation, url: reservations_confirm_reservations_path(@reservation)  do |f| %>
-        <%= f.hidden_field :room_id, value:@room_post.id %>
-        <div class="row">
-          <p><%= f.label :check_in, "チェックイン" %></p>
-          <%= f.date_field :check_in, required: true %>
-        </div>
-
-        <div class="row">
-          <p><%= f.label :check_out, "チェックアウト" %></p>
-          <%= f.date_field :check_out, required: true %>
-        </div>
-
-        <div class="row">
-          <p><%= f.label :people, "人数" %></p>
-          <%= f.number_field :people, required: true %>
-        </div>
-
-        <div class="btn">
-          <%= f.submit "予約する" %>
-        </div>
-      <% end %>
-    </div>
+<%= render "shared/error", obj: @reservation %> 
+<div class="reservation-container">
+  <div class="room_detail">
+    <p><%= image_tag @room_post.room_img.url %></p>
+    <p><%= @room_post.room_name %></p>
+    <p><%= @room_post.room_address %></p>
+    <p><%= @room_post.room_introduction %></p>
   </div>
+  <div class="form_area">
+    <div class="fee">
+      <p> ¥ <%= @room_post.room_fee %> /日<p>  
+    </div>
+    <%= form_with model:@reservation, url: reservations_confirm_reservations_path(@reservation)  do |f| %>
+      <%= f.hidden_field :room_id, value:@room_post.id %>
+      <div class="row">
+        <%= f.label :check_in, "チェックイン" %>
+        <%= f.date_field :check_in, required: true, min: Date.current %>
+      </div>
+
+      <div class="row">
+        <%= f.label :check_out, "チェックアウト" %></p>
+        <%= f.date_field :check_out, required: true, min: Date.current %>
+      </div>
+
+      <div class="row">
+        <%= f.label :people, "人数" %>
+        <%= f.number_field :people, required: true, in:1..100 %>
+      </div>
+
+      <div class="btn">
+        <%= f.submit "予約する" %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
 

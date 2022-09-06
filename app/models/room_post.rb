@@ -3,6 +3,5 @@ class RoomPost < ApplicationRecord
   has_many :reservations
 
   mount_uploader :room_img, ImageUploader
-  
 end 
  
